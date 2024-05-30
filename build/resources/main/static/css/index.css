@@ -1,11 +1,18 @@
+@font-face {
+    font-family: 'HakgyoansimBareonbatangB';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimBareonbatangB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
 #wrap {
-    min-width: 1340px;
+    width: 100%;
 }
 
 #header {
-    width: 1280px;
-    margin: 0 auto
+    margin: 0;
 }
+
 div {
     display: block;
 }
@@ -19,76 +26,110 @@ body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,inpu
     padding: 0;
 }
 
-.main-screen-main-image {
-    margin: 50px;
+a {
+    text-decoration-line: none;
 }
 
-.main-screen-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.grid-container {
-    margin: 26px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-    "header header header"
-    "main content aside"
-    "footer footer footer";
-    grid-gap: 20px;
-}
-
-.menu-container {
-    top: 50px;
-    left: 50px;
-    width: 40px;
-    height: 37.33px;
+h1 {
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-family: "HakgyoansimBareonbatangB";
+    font-size: 100px;
+    color: #FF8A00;
     position: absolute;
 }
 
-.kowl_image {
-    align-self: center;
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row;
+    float: right;
+    margin: 10px;
+    left: 80%;
+    top: 5%; */
+    margin: 20px;
+    display: flex;
+    justify-content: flex-end;
+    
+    /* position: absolute; */
 }
 
-.hidden_menu_rectangle {
-    top:0;
-    left:0;
-    flex-direction: column;
-    height: 100vh;
-    max-width: 280px;
+#leftSidebar {
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    position: fixed;
+}
+
+.white-menu-icon {
+    left: 15%;
+    top: 5%;
     position: absolute;
 }
 
-.hidden_menu_icon {
-    top: 50px;
-    left: 50px;
-    width: 40px;
-    height: 37.33px;
+.hidden-menu-rectangle {
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-width: 240px;
+}
+
+.hidden-menu-icon {
+    left: 15%;
+    top: 5%;
     position: absolute;
 }
 
-.hidden_shop_link {
-    top: 198px;
-    left: 50px;
+.hidden-shop-link {
+    left: 15%;
+    top: 20%;
     position: absolute;
 }
 
-.hidden_archive_link {
-    top: 349px;
-    left: 50px;
+.hidden-archive-link {
+    left: 15%;
+    top: 40%;
     position: absolute;
 }
 
-.hidden_instagram_logo_link {
-    top: 600px; /* 추후 하단에서 몇px로 변경 */
-    left: 51px;
+.hidden-instagram-logo-link {
+    left: 15%;
+    top: 80%;
     position: absolute;
 }
 
-.hidden_X_image {
-    top: 20px;
-    left: 200px; /* 추후 변경 */
+.hidden-X-image {
+    left: 95%;
+    top: 5%;
     position: absolute;
+}
+
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto; /* 컨테이너의 높이를 뷰포트 높이로 설정 */
+}
+
+.kowl-image {
+    margin-top: 5%;
+    margin-left: 15%;
+    margin-right: 15%;
+    max-width: 100%; /* 이미지의 최대 너비를 컨테이너 너비로 제한 */
+    height: auto; /* 이미지의 높이를 자동으로 설정 */
+    width: 100%;
+}
+
+#itemContainer {
+    margin-top: 5%;
+    margin-left: 20%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-item {
+    flex-basis: calc(30% - 20px);
+    align-items: center;
 }

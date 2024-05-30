@@ -1,12 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>KOWL</title>
-    <link href="../css/shop.css" rel="stylesheet">
+    <link href="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/css/index.css" rel="stylesheet">
 
 </head>
-<body>
-<p>shop</p>
+<body style="background-color: rgb(0, 0, 0);">
+    <div id="wrap">
+        <div id="leftSidebar">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-White.png" id="menuIcon" class="white-menu-icon" alt="white-menu-icon">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_menu_rectangle.png" id="hiddenMenuRectangle" class="hidden-menu-rectangle" style="display: none;" alt="hidden-white-background">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-Black.png" id="hiddenMenuIcon" class="hidden-menu-icon" style="display: none;" alt="hidden-black-menu-icon">
+            <a href="/form/shop">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/SHOP.png" id="hiddenShopLink" class="hidden-shop-link" style="display: none;" alt="hidden-shop-link">
+            </a>
+            <a href="/form/archive">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Archive.png" id="hiddenArchiveLink" class="hidden-archive-link" style="display: none;" alt="archive">
+            </a>
+            <a href="https://www.instagram.com/kowl.kr" target="_blank">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Instagram_logo.png" id="hiddenInstagramLogoLink" class="hidden-instagram-logo-link" style="display: none;" alt="instagram-link">
+            </a>
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_X_image.png" id="hiddenXImage" class="hidden-X-image" style="display: none;" alt="hidden-X-image">
+        </div>
+        <div id="header">
+            <div>
+                <a href="/">
+                    <h1>KOWL</h1>
+                </a>
+            </div>
+            <div class="item">
+                <a href="/form/bookmark">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/BookmarkImage.png" style="float:right; margin:10px;" alt="bookmark_image">
+                </a>
+                <a href="/form/cart">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/CartImage.png" style="float:right; margin:10px;" alt="cart_image">
+                </a>
+                <a href="/form/person">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/PersonImage.png" style="float:right; margin:10px;" alt="personal_image">
+                </a>
+            </div>
+        </div>
+        <div id="itemContainer">
+            <figure>
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/temp/firstImage.png" id="firstItem" class="product-item" alt="first-item">
+                <figcaption style="color: aliceblue; text-align:center">이미지설명</figcaption>    
+            </figure>
+            <figure>
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/temp/secondImage.png" id="secondItem" class="product-item" alt="second-item">
+                <figcaption style="color: aliceblue; text-align:center">이미지설명</figcaption>    
+            </figure>
+            <figure>
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/temp/thirdImage.png" id="thirdItem" class="product-item" alt="third-item">
+                <figcaption style="color: aliceblue; text-align:center">이미지설명</figcaption>   
+            </figure>
+            <figure>
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/temp/forthImage.png" id="forthItem" class="product-item" alt="forth-item">
+                <figcaption style="color: aliceblue; text-align:center">이미지설명</figcaption>   
+            </figure>
+            <span th:text="${data}"></span>
+        </div>
+    </div>
+    <script src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/index.js"></script>
 </body>
 </html>
