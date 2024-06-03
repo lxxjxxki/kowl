@@ -126,10 +126,53 @@ h1 {
     margin-left: 20%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    /* border: 1px solid white; */
 }
 
 .product-item {
-    flex-basis: calc(30% - 20px);
-    align-items: center;
+
+}
+
+#contentWrap {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 0%);
+}
+.text {
+    font-size: 30px;
+}
+.submit-button {
+    margin-top: 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    background-color: #FFFFFF;
+    font-size: x-large;
+}
+
+#cartContainer {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%, 0%);
+}
+.keep-shopping-button {
+    margin-top: 10px;
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none;
+    background-color: #FFFFFF;
+    font-size: large;
+    margin-left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+#bookmarkContainer {
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translate(-50%, 0%);
 }

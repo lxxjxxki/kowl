@@ -7,44 +7,60 @@
 
 </head>
 <body style="background-color: rgb(0, 0, 0);">
-<div id="wrap">
-    <div id="leftSidebar">
-        <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-White.png" id="menuIcon" class="white-menu-icon" alt="white-menu-icon">
-        <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_menu_rectangle.png" id="hiddenMenuRectangle" class="hidden-menu-rectangle" style="display: none;" alt="hidden-white-background">
-        <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-Black.png" id="hiddenMenuIcon" class="hidden-menu-icon" style="display: none;" alt="hidden-black-menu-icon">
-        <a href="/form/shop">
-            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/SHOP.png" id="hiddenShopLink" class="hidden-shop-link" style="display: none;" alt="hidden-shop-link">
-        </a>
-        <a href="/form/archive">
-            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Archive.png" id="hiddenArchiveLink" class="hidden-archive-link" style="display: none;" alt="archive">
-        </a>
-        <a href="https://www.instagram.com/kowl.kr" target="_blank">
-            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Instagram_logo.png" id="hiddenInstagramLogoLink" class="hidden-instagram-logo-link" style="display: none;" alt="instagram-link">
-        </a>
-        <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_X_image.png" id="hiddenXImage" class="hidden-X-image" style="display: none;" alt="hidden-X-image">
-    </div>
-    <div id="header">
-        <div>
-            <a href="/">
-                <h1>KOWL</h1>
+    <div id="wrap">
+        <div id="leftSidebar">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-White.png" id="menuIcon" class="white-menu-icon" alt="white-menu-icon">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_menu_rectangle.png" id="hiddenMenuRectangle" class="hidden-menu-rectangle" style="display: none;" alt="hidden-white-background">
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Hamburger-Menu-Icon-Black.png" id="hiddenMenuIcon" class="hidden-menu-icon" style="display: none;" alt="hidden-black-menu-icon">
+            <a href="/form/shop">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/SHOP.png" id="hiddenShopLink" class="hidden-shop-link" style="display: none;" alt="hidden-shop-link">
             </a>
+            <a href="/form/archive">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Archive.png" id="hiddenArchiveLink" class="hidden-archive-link" style="display: none;" alt="archive">
+            </a>
+            <a href="https://www.instagram.com/kowl.kr" target="_blank">
+                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/Instagram_logo.png" id="hiddenInstagramLogoLink" class="hidden-instagram-logo-link" style="display: none;" alt="instagram-link">
+            </a>
+            <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/hidden_X_image.png" id="hiddenXImage" class="hidden-X-image" style="display: none;" alt="hidden-X-image">
         </div>
-        <div class="item">
-            <a href="/form/bookmark">
-                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/BookmarkImage.png" style="float:right; margin:10px;" alt="bookmark_image">
-            </a>
-            <a href="/form/cart">
-                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/CartImage.png" style="float:right; margin:10px;" alt="cart_image">
-            </a>
-            <a href="/form/person">
-                <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/PersonImage.png" style="float:right; margin:10px;" alt="personal_image">
-            </a>
+        <div id="header">
+            <div>
+                <a href="/">
+                    <h1>KOWL</h1>
+                </a>
+            </div>
+            <div class="item">
+                <a href="/form/bookmark">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/BookmarkImage.png" style="float:right; margin:10px;" alt="bookmark_image">
+                </a>
+                <a href="/form/cart">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/CartImage.png" style="float:right; margin:10px;" alt="cart_image">
+                </a>
+                <a href="/form/person">
+                    <img src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/images/PersonImage.png" style="float:right; margin:10px;" alt="personal_image">
+                </a>
+            </div>
+        </div>
+        <div id="cartContainer">
+            <div></div>
+            <p style="color: aliceblue; font-weight: 600; font-size: 40px; text-align: center; width: calc(100%);">주문 조회</p>
+            <div></div>
+            <p id="cartNoInformation" class="cart_information" style="color: aliceblue; font-weight: 600; font-size: 20px; text-align: center; width: calc(100%);">
+                <br><br>
+                장바구니에 담은 상품이 없습니다.
+                <br><br>
+            </p>
+            <!-- 카트에 담은 상품 있을 때-->
+            <p id="cartYesInformation" class="cart_information" style="color: aliceblue; font-weight: 600; font-size: 20px; text-align: center; width: calc(100%);">
+                <br><br>
+                장바구니에 담은 상품이 "있"습니다.
+                <br><br>
+            </p>
+            <form action="/"> <!-- <form> 태그의 action 속성은 폼 데이터(form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시합니다. -->
+                <button class="keep-shopping-button">계속 쇼핑하기</button>
+            </form>
         </div>
     </div>
-    <div id="cartContainer">
-        <span th:text="${data}"></span>
-    </div>
-</div>
-<script src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/index.js"></script>
+    <script src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/index.js"></script>
 </body>
 </html>

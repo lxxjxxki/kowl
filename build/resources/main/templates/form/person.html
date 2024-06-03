@@ -41,8 +41,30 @@
                 </a>
             </div>
         </div>
-        <div id="personContainer">
-            <span th:text="${data}"></span>
+        <div id="contentWrap">
+            <div></div>
+            <p style="color: aliceblue; font-weight: 600; font-size: 40px; text-align: center; width: calc(100%);">주문 조회</p>
+            <div></div>
+            <p class="personal_information" style="color: aliceblue; font-weight: 600; font-size: 20px; text-align: center; width: calc(100%);">
+                <br><br>
+                주문번호는 주문 시, 작성하신 이메일로 발송되었으니 확인 부탁 드립니다.
+                <br><br>
+                주문번호 분실 시 아래로 문의 바랍니다.
+                <br><br>
+                tkdwkd159@naver.com <br>
+                kowl.kr 인스타 DM <br><br><br>
+            </p>
+            <!--form으로 변경-->
+            <div></div>
+            <form action="URL"> <!-- <form> 태그의 action 속성은 폼 데이터(form data)를 서버로 보낼 때 해당 데이터가 도착할 URL을 명시합니다. -->
+                <p style="color: aliceblue; font-weight:300; font-size: 20px; text-align: left;">이름</p> <!--이름-->
+                <input type="text" class="text" th:value="${user.name}"/><br/>
+                <p style="color: aliceblue; font-weight:300; font-size: 20px; text-align: left; width: calc(100%)">이메일</p> <!--휴대폰 번호-->
+                <input type="text" class="text" th:value="${user.email}"/><br/>
+                <p style="color: aliceblue; font-weight:300; font-size: 20px; text-align: left; width: calc(100%)">주문번호</p> <!--주문번호(주문 시, 이메일로 발송)-->
+                <input type="text" class="text" th:value="${order.id}"/><br/>
+                <button class="submit-button">제출</button>
+            </form>
         </div>
     </div>
     <script src="https://kowlbucket.s3.ap-northeast-2.amazonaws.com/index.js"></script>
